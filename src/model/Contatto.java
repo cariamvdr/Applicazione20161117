@@ -7,7 +7,7 @@ public class Contatto {
     private String cognome="";
     private String telefono="";
 
-        public Contatto (){}
+        public Contatto (){} 
         
         public Contatto (long id, String nome, String cognome, String telefono){
             this.setNome(nome);

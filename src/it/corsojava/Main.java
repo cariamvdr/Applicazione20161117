@@ -106,6 +106,19 @@ public class Main {
         }
         
         LogFile.getInstance().info(stringa);
+        
+        List<Contatto> list = rubrica.getContatti();
+        Map<String, Contatto> mappaRicerca = new HashMap<>();
+        list = rubrica.getContatti();
+        for (int i = 0; i< list.size(); i++){
+            String nome = list.get(i).getNome();
+            mappaRicerca.put(nome, list.get(i));
+            LogFile.getInstance().info("\n\n"+nome+",\n"+list.get(i));
+        }
+        
+        for (Contatto c : rubrica.getContatti()){
+            rubrica.getMappaRicerca().put(c.getNome(), c);
+        }
     }
     
 }
