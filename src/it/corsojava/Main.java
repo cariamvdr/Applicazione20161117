@@ -1,5 +1,7 @@
 package it.corsojava;
 
+import model.Rubrica;
+import model.Contatto;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -10,7 +12,7 @@ import java.util.TreeMap;
 public class Main {
 
     public static void main(String[] args) {
-        LogFile.getInstance().info("Ciaone");
+        /*LogFile.getInstance().info("Ciaone");
         
         LogFile.getInstance().info("Ciaone tua sorella");
         
@@ -31,7 +33,7 @@ public class Main {
         Double somma = 0d;
         for (int i = 0; i<oggetti.size(); i++){
             if (oggetti.get(i)  instanceof Double){
-            somma+= /*(Double)*/oggetti.get(i);
+            somma+= *//*(Double)*//*oggetti.get(i);
             }            
         }
         
@@ -80,7 +82,24 @@ public class Main {
         for(String k: rubricaSemplice3.keySet()){
             String v = rubricaSemplice3.get(k);
             LogFile.getInstance().info(String.format("%s: %s", k , v));
+        }*/
+        Contatto aldo = new Contatto (0,"Cataldo","Baglio","345 3322111");
+        Contatto giovanni = new Contatto (1,"Giovanni","Storti","350 3454887");
+        Contatto giacomo = new Contatto (2,"Giacomo","Poretti","323 3334441");
+        
+        Rubrica rubrica = new Rubrica();
+        rubrica.addContatto(aldo);
+        rubrica.addContatto(giovanni);
+        rubrica.addContatto(giacomo);
+        
+        String stringa="";
+        for(Contatto i: rubrica.getContatti()){
+           stringa+="\n\nnome: "+i.getNome();             
+           stringa+="\ncognome: "+i.getCognome();             
+           stringa+="\ntelefono: "+i.getTelefono();             
         }
+        
+        System.out.println(stringa);
     }
     
 }
