@@ -105,7 +105,7 @@ public class Main {
            stringa+=i.toString()+"\n";
         }
         
-        System.out.println(stringa);
+        LogFile.getInstance().info(stringa);
     }
     
 }

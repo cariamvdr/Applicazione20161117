@@ -18,7 +18,7 @@ public class Contatto {
         
         @Override
         public String toString(){
-            return String.format("id: %d, nome: %s, cognome: %s, telefono: %s", id, nome, cognome, telefono);
+            return String.format("\n\nid: %d\nnome: %s\ncognome: %s\ntelefono: %s", id, nome, cognome, telefono);
         }
         
             public String getNome(){
