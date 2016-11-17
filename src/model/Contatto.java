@@ -16,6 +16,11 @@ public class Contatto {
             this.setId(id);
         }
         
+        @Override
+        public String toString(){
+            return String.format("id: %d, nome: %s, cognome: %s, telefono: %s", id, nome, cognome, telefono);
+        }
+        
             public String getNome(){
                 return this.nome;
             }

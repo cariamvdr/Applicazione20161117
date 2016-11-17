@@ -94,9 +94,15 @@ public class Main {
         
         String stringa="";
         for(Contatto i: rubrica.getContatti()){
-           stringa+="\n\nnome: "+i.getNome();             
+           stringa+="\n\nid: "+String.valueOf(i.getId());             
+           stringa+="\nnome: "+i.getNome();             
            stringa+="\ncognome: "+i.getCognome();             
            stringa+="\ntelefono: "+i.getTelefono();             
+        }
+        
+        stringa+="\n\n\n\n";
+        for(Contatto i: rubrica.getContatti()){
+           stringa+=i.toString()+"\n";
         }
         
         System.out.println(stringa);
